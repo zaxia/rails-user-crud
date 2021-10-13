@@ -1,0 +1,14 @@
+<script src="/lib/js/jquery.slim.min.js"></script>
+<script src="/lib/js/bootstrap.min.js"></script>
+<script src="/lib/js/axios.min.js"></script>
+
+<% case request.path %>
+    <% when "/login" %>
+        <script src="/app/js/home/login.js"></script>
+    <% when "/" %>
+        <script src="/app/js/home/index.js"></script>
+    <% when "/user/add" %>
+        <script src="/app/js/user/add.js"></script>
+    <% when "/user/edit" %>
+        <script src="/app/js/user/edit.js"></script>
+<% end %>
