@@ -1,6 +1,20 @@
 <link rel="stylesheet" href="/lib/css/bootstrap.min.css" type="text/css" />
 
 <% case request.path %>
+    <% when "/login" %>
+        <link rel="stylesheet" href="/app/css/home/login.css" type="text/css" />
     <% when "/" %>
         <link rel="stylesheet" href="/app/css/home/index.css" type="text/css" />
+    <% when "/user/add" %>
+        <link rel="stylesheet" href="/app/css/user/add.css" type="text/css" />
+    <% when "/user/edit" %>
+        <link rel="stylesheet" href="/app/css/user/edit.css" type="text/css" />
+    <% when "/chat" %>
+        <link rel="stylesheet" href="/app/css/chat/page.css" type="text/css" />
+    <% when "/email" %>
+        <link rel="stylesheet" href="/app/css/email/page.css" type="text/css" />
+    <% when "/calculation" %>
+        <link rel="stylesheet" href="/app/css/calculation/page.css" type="text/css" />
+    <% when "/solidity" %>
+        <link rel="stylesheet" href="/app/css/solidity/page.css" type="text/css" />
 <% end %>

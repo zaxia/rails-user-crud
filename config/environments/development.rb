@@ -74,4 +74,24 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  host = "127.0.0.1:3000" #replace with your own url
+  config.action_mailer.default_url_options = { host: host }
+
+  # SMTP settings for outlook
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp_address",
+    :port                 => 587,
+    :user_name            => "user",
+    :password             => "password",
+    :authentication       => "login"
+  }
+
+
+  #Websocket
+  config.action_cable.url = "ws://localhost:3000/chat_websocket"
 end

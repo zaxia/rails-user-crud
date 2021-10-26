@@ -8,13 +8,16 @@
     </head>
     <body>
         <%= render template: "layouts/header" %>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Utilisateurs</h1>
+                <span>Liste des utilisateurs</span>
+            </div>
+        </div>
         <div id="app" class="container">
-            <h2>Utilisateurs</h2>
-            <span>Liste des utilisateurs</span>
-            <hr>
             <div class="row">
                 <div class="col-md-2">
-                    <a class="button_link" href="/user/add" ><button class="btn btn-primary btn-block">Ajouter</button></a>
+                    <p><a class="button_link" href="/user/add" ><button class="btn btn-primary btn-block">Ajouter</button></a></p>
                 </div>
             </div>
             <table class="table table-bordered table-sm">
@@ -32,8 +35,8 @@
                   <tr>
                       <td width="80"><%= user.login %></td>
                       <td><%= user.firstname %> <%= user.lastname %></td>
-                      <td><%= user.createdAt %></td>
-                      <td><%= user.updatedAt %></td>
+                      <td><%= user.createdAt.strftime("%d/%m/%Y %H:%M:%S") %></td>
+                      <td><%= user.updatedAt.strftime("%d/%m/%Y %H:%M:%S") %></td>
                       <td width="170">
                           <a class="button_link" href="/user/edit?login=<%= user.login %>" ><button class="btn btn-info btn-sm">Modifier</button></a>
                           <a class="button_link" href="/user/edit?login=<%= user.login %>" ><button class="btn btn-danger btn-sm">Supprimer</button></a>
